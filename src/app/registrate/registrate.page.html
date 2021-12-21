@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title >
+     <h4 style="color:#ffffff"> Registro del Dueño</h4>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form >
+    <ion-item >
+      <ion-label  position="floating">Nombre</ion-label>
+      <ion-input  type="text" required></ion-input >
+      
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>DD MM YY</ion-label>
+      <ion-datetime displayFormat="DD MM YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+
+
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+
+
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/registroexitoso']" type="submit" color="primary" expand="block" > <p style="color:#f7ecec" >Registrar</p> </ion-button>
+        <ion-button [routerLink]="['/home']" type="submit" color="danger" expand="block" > <p> Salir </p> </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+
+
+</ion-content>

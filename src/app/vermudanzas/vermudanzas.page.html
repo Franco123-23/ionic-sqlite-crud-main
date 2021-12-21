@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+
+
+    <div  style="text-align: left;">
+  
+    <ion-button color="primary" [routerLink]="['/home']" >
+      <ion-icon  slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+    </div>
+
+  </ion-toolbar>
+  <ion-searchbar class = "hola"  showCancelButton="never"></ion-searchbar>
+ 
+</ion-header>
+<ion-list>
+  <ion-item-sliding *ngFor="let person of persons">
+    
+
+    <ion-item>
+      <ion-label>{{ person.person }}</ion-label>
+      <ion-badge color="primary">{{ person.category }}</ion-badge>
+    </ion-item>
+
+  </ion-item-sliding>
+</ion-list>

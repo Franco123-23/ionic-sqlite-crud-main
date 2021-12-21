@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <h4 class="center" style="color:#ffffff">Reenvío</h4>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/enviodecontrasena']" type="submit" color="primary" expand="block">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <small>
+
+    </small>
+  </form>
+</ion-content>
+

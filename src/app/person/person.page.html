@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="color:#ffffff">Direccion restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Categoria Restaurate</ion-label>
+      <ion-select value="{{ selected_category_id }}" [(ngModel)]="category_id">
+        <ion-select-option
+          *ngFor="let category of categories"
+          value="{{ category.id }}"
+          >{{ category.name }}</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Direccion restaurante </ion-label>
+      <ion-input [(ngModel)]="personName"></ion-input>
+    </ion-item>
+
+    <ion-button color="success" expand="block" (click)="addPerson()">Crear </ion-button>
+    <ion-button color= "danger" expand="block" [routerLink]="['/home']">Salir</ion-button>
+    <ion-button color= "warning" expand="block" [routerLink]="['/registroadmin']">Añadir administrador</ion-button>
+    <ion-button expand="block" [routerLink]="['/vermudanzas']">Ver Restaurante Registrado</ion-button>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding *ngFor="let person of persons">
+      <ion-item-options side="start">
+        <ion-item-option color="warning" (click)="editPerson(person)">Editar</ion-item-option>
+      </ion-item-options>
+
+      <ion-item>
+        <ion-label>{{ person.person }}</ion-label>
+        <ion-badge color="primary">{{ person.category }}</ion-badge>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deletePerson(person.id)"
+          >Borrar</ion-item-option
+        >
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+
+  
+
+  
+
+    
+
+</ion-content>

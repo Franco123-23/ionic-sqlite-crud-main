@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar  class="new-background-color">
+    <div  style="text-align: left;">
+      <ion-button color="primary" [routerLink]="['/home']" >
+        <ion-icon  slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      </div>
+    <h4 class="center" style="color:#ffffff"> Bienvenido Usuario </h4>
+  </ion-toolbar>
+</ion-header>
+
+
+  <img src="assets/img/usuario.png" >
+
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/loginusuario']" expand="block" color="primary">Iniciar sesion </ion-button>
+        <span class="divider line one-line"><p style="color:#000000"> o</p></span>
+        <ion-button [routerLink]="['/registrousuario']" expand="block" color="danger">Registrate</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

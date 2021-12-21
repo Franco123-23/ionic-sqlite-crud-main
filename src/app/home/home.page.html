@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar  class="new-background-color">
+    <div  style="text-align: right;">
+      <ion-button color="success" [routerLink]="['/vistausuario']">
+        <ion-icon  slot="icon-only" name="person-add"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" [routerLink]="['/vistarepartidor']">
+        <ion-icon  slot="icon-only" name="bicycle"></ion-icon>
+      </ion-button>
+      <ion-button color="warning"  [routerLink]="['/vermudanzas']" >
+        <ion-icon  slot="icon-only" name="restaurant"></ion-icon>
+      </ion-button>
+      </div>
+    <h4 class="center" style="color:#ffffff"> Delivery UC</h4>
+  </ion-toolbar>
+</ion-header>
+
+
+  <img src="assets/img/gorro.jpg" >
+
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/login']" expand="block" color="primary">Entra a tu negocio </ion-button>
+        <span class="divider line one-line"><p style="color:#000000"> o</p></span>
+        <ion-button [routerLink]="['/registrate']" expand="block" color="danger">Registra tu negocio </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

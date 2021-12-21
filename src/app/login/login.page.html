@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title >
+      <h4  style="color:#ffffff"> Login de Dueño</h4>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/category']" type="submit" color="primary" expand="block">Iniciar Sesión</ion-button>
+        <a [routerLink]="['/contrasena']" class="small-text">Olvidaste la Contraseña?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
